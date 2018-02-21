@@ -24,6 +24,6 @@ Puedes apoyar hasta 30 witnesses, votar por ello no tiene costo, te invito a mir
             
 Perfil | Votar witness  
 -|-  
-@castellano | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=castellano&approve=1)  
-@dropahead | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=dropahead&approve=1)  
-@moisesmcardona | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=moisesmcardona&approve=1)  
+[@castellano](https://steemit.com/@castellano) | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=castellano&approve=1)  
+[@dropahead](https://steemit.com/@dropahead) | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=dropahead&approve=1)  
+[@moisesmcardona](https://steemit.com/@moisesmcardona) | [Vota usando steemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=moisesmcardona&approve=1)  
