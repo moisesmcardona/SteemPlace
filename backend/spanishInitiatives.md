@@ -11,7 +11,7 @@ Nombre | Vocación | Link
 [@provenezuela](https://steemit.com/@provenezuela) | Comunidad para desarrollo de steemit en Venezuela |[Servidor en Discord](https://discord.gg/wPqmxX6)  
 [@provenezuela](https://steemit.com/@provenezuela) | Comunidad para desarrollo de steemit en Venezuela |[Grupo en Telegram](https://t.me/joinchat/FZwk8076QJGh_AEO5rBp-w)
 [@reveur](https://steemit.com/@reveur) | roBOT de votos para los articulos en #castellano y #venezuela  creado por [@nnnarvaez](https://steemit.com/@nnnarvaez)| [Servidor en Discord](https://discord.gg/4NjkaVs)  
-[@srcinanuro](https://steemit.com/@srcianuro) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/BpSb89A)  
+[@srcianuro](https://steemit.com/@srcianuro) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/BpSb89A)  
 [@steem-pays](https://steemit.com/@steem-pays) | Servicio de intercambio de STEEM y SBD a Bolívares y Pesos Colombianos | [Servidor en Discord](https://discord.gg/YQGHe2d)  
 [@theunion](https://steemit.com/@theunion) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/bmuM6f)
 [@trailhispano](https://steemit.com/@trailhispano) | Comunidad de apoyo Hispano creada por @moisesmcardona Witness| [Servidor de discord](https://discord.gg/XqgGQH3)  
