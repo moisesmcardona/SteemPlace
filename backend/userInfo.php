@@ -19,6 +19,7 @@ function userInfo($user, $language){
         $witnessNotice = "Todavía no has votado a <a href=https://steemit.com/@moisesmcardona>@moisesmcardona</a> como Witness. <A href=https://v2.steemconnect.com/sign/account-witness-vote?witness=moisesmcardona&approve=1>Vótalo como Witness presionando aquí.</a>";
     }
     if(user_is_logged_in()){
+        $userOK = 0;
         $result=$mysqli->query("SELECT * FROM users2 WHERE drupalkey = $user->uid");
         if(mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)) {
