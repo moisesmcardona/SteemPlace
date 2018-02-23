@@ -32,7 +32,8 @@ function Trail($user, $language)
             $recordfound = 0;
         }
         $_SESSION['recordfound'] = $recordfound;
-        if ($recordfound == 0) {
+        $approved = checkUser($user, $recordfound, $mysqli);
+        if ($recordfound == 0 || $approved == 0) {
             echo $accountNotConfigured;
         } else {
             $settingsSaved = False;
@@ -299,7 +300,6 @@ function Trail($user, $language)
                     addUserToFollowTable($user, $_SESSION['usertouse'], 'wearecodex', $_POST['weightwearecodex'], $wearecodexEnabled, $mysqli);
                 $settingsSaved = True;
             }
-            $approved = checkUser($user, $recordfound, $mysqli);
             if ($approved == 1) {
                 $result = $mysqli->query("SELECT * FROM followtrail WHERE drupalkey = $user->uid");
                 if (mysqli_num_rows($result) > 0) {
