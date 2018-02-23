@@ -18,6 +18,7 @@ function trailCount($language){
     getTrailCount($language, "MUSICLASS", "musiclass", $mysqli);
     getTrailCount($language, "ProVenezuela", "provenezuela", $mysqli);
     getTrailCount($language, "Reveur", "reveur", $mysqli);
+    getTrailCount($language, "Ruta Blockchain", "rutablockchain", $mysqli);
     getTrailCount($language, "Sr. Cianuro", "srcianuro", $mysqli);
     getTrailCount($language, "LA UNION", "theunion", $mysqli);
     getTrailCount($language, "Trail Hispano", "trailhispano", $mysqli);
