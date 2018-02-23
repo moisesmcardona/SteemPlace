@@ -75,6 +75,9 @@ function Trail($user, $language)
             $reveurChecked = "";
             $reveurPercent = 0.0;
             $reveurFound = False;
+            $rutablockchainChecked = "";
+            $rutablockchainPercent = 0.0;
+            $rutablockchainFound = False;
             $srcianuroChecked = "";
             $srcianuroPercent = 0.0;
             $srcianuroFound = False;
@@ -94,7 +97,6 @@ function Trail($user, $language)
             $wearecodexPercent = 0.0;
             $wearecodexFound = False;
             if (isset($_POST['save'])) {
-                $sqlquery = "";
                 $amigoosFound = $_SESSION['amigoosFound'];
                 $babelproyectFound = $_SESSION['babelproyectFound'];
                 $bienvenidaFound = $_SESSION['bienvenidaFound'];
@@ -108,6 +110,7 @@ function Trail($user, $language)
                 $proapoyoFound = $_SESSION['proapoyoFound'];
                 $provenezuelaFound = $_SESSION['provenezuelaFound'];
                 $reveurFound = $_SESSION['reveurFound'];
+                $rutablockchainFound = $_SESSION['rutablockchainFound'];
                 $srcianuroFound = $_SESSION['srcianuroFound'];
                 $theunionFound = $_SESSION['theunionFound'];
                 $trailhispanoFound = $_SESSION['trailhispanoFound'];
@@ -231,6 +234,15 @@ function Trail($user, $language)
                     updateUserToFollowTable($user, 'reveur', $_POST['weightreveur'],  $reveurEnabled, $mysqli);
                 else
                     addUserToFollowTable($user, $_SESSION['usertouse'], 'reveur', $_POST['weightreveur'], $reveurEnabled, $mysqli);
+                //rutablockchain
+                if (isset($_POST['activarrutablockchain']))
+                    $rutablockchainEnabled = 1;
+                else
+                    $rutablockchainEnabled = 0;
+                if ($rutablockchainFound == True)
+                    updateUserToFollowTable($user, 'rutablockchain', $_POST['weightrutablockchain'],  $rutablockchainEnabled, $mysqli);
+                else
+                    addUserToFollowTable($user, $_SESSION['usertouse'], 'rutablockchain', $_POST['weightrutablockchain'], $reveurEnabled, $mysqli);
                 //srcianuro
                 if (isset($_POST['activarsrcianuro']))
                     $srcianuroEnabled = 1;
@@ -396,6 +408,14 @@ function Trail($user, $language)
                                 $reveurChecked = "checked";
                             else
                                 $reveurChecked = "";
+                        } else if ($row["account"] == "rutablockchain") {
+                            $rutablockchainFound = True;
+                            $rutablockchainEnabled = $row["enabled"];
+                            $rutablockchainPercent = $row["percent"];
+                            if ($rutablockchainEnabled == 1)
+                                $rutablockchainChecked = "checked";
+                            else
+                                $rutablockchainChecked = "";
                         } else if ($row["account"] == "srcianuro") {
                             $srcianuroFound = True;
                             $srcianuroEnabled = $row["enabled"];
@@ -460,6 +480,7 @@ function Trail($user, $language)
                 $_SESSION['proapoyoFound'] = $proapoyoFound;
                 $_SESSION['provenezuelaFound'] = $provenezuelaFound;
                 $_SESSION['reveurFound'] = $reveurFound;
+                $_SESSION['rutablockchainFound'] = $rutablockchainFound;
                 $_SESSION['srcianuroFound'] = $srcianuroFound;
                 $_SESSION['theunionFound'] = $theunionFound;
                 $_SESSION['trailhispanoFound'] = $trailhispanoFound;
@@ -490,6 +511,7 @@ function Trail($user, $language)
 						<tr><td><a href=https://steemit.com/@proapoyo>@proapoyo</a></td><td><input type='checkbox' name='activarproapoyo' value='activarproapoyo' id='activarproapoyo' $proapoyoChecked></td><td><input name='weightproapoyo' type='text'/ value=$proapoyoPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@provenezuela>@provenezuela</a></td><td><input type='checkbox' name='activarprovenezuela' value='activarprovenezuela' id='activarprovenezuela' $provenezuelaChecked></td><td><input name='weightprovenezuela' type='text'/ value=$provenezuelaPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@reveur>@reveur</a></td><td><input type='checkbox' name='activarreveur' value='activarreveur' id='activarreveur' $reveurChecked></td><td><input name='weightreveur' type='text'/ value=$reveurPercent>%</td></tr>
+						<tr><td><a href=https://steemit.com/@rutablockchain>@rutablockchain</a></td><td><input type='checkbox' name='activarrutablockchain' value='activarrutablockchain' id='activarrutablockchain' $rutablockchainChecked></td><td><input name='weightrutablockchain' type='text'/ value=$rutablockchainPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@srcianuro>@srcianuro</a></td><td><input type='checkbox' name='activarsrcianuro' value='activarsrcianuro' id='activarsrcianuro' $srcianuroChecked></td><td><input name='weightsrcianuro' type='text'/ value=$srcianuroPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@theunion>@theunion</a></td><td><input type='checkbox' name='activartheunion' value='activartheunion' id='activartheunion' $theunionChecked></td><td><input name='weighttheunion' type='text'/ value=$theunionPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@trailhispano>@trailhispano</a></td><td><input type='checkbox' name='activartrailhispano' value='activartrailhispano' id='activartrailhispano' $trailhispanoChecked></td><td><input name='weighttrailhispano' type='text'/ value=$trailhispanoPercent>%</td></tr>
