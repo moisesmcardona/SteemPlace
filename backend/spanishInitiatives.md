@@ -8,7 +8,7 @@ Nombre | Vocación | Link
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Grupo en Facebook](https://www.facebook.com/groups/174466129786236/)  
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pzWBrJV) 
 [@musiclass](https://steemit.com/@musiclass) |  Capacitacion y Apoyo para Musico |[Grupo en Discord](https://discord.gg/BHJzTmv)  
-[@orinoco](https://steemit.com/@orinoco) |  Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/g9XerHn) 
+[@orinoco](https://steemit.com/@orinoco) | Servicio de Intercambio a Bs, BTC y ETH |[Servidor en Discord](https://discord.gg/g9XerHn) 
 [@provenezuela](https://steemit.com/@provenezuela) | Comunidad para desarrollo de steemit en Venezuela |[Servidor en Discord](https://discord.gg/wPqmxX6)  
 [@provenezuela](https://steemit.com/@provenezuela) | Comunidad para desarrollo de steemit en Venezuela |[Grupo en Telegram](https://t.me/joinchat/FZwk8076QJGh_AEO5rBp-w)
 [@reveur](https://steemit.com/@reveur) | roBOT de votos para los articulos en #castellano y #venezuela  creado por [@nnnarvaez](https://steemit.com/@nnnarvaez)| [Servidor en Discord](https://discord.gg/4NjkaVs)
