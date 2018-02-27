@@ -15,6 +15,7 @@ Nombre | Vocación | Link
 [@rutablockchain](https://steemit.com/@rutablockchain) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/NUzZjM)  
 [@srcianuro](https://steemit.com/@srcianuro) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/BpSb89A)  
 [@steem-pays](https://steemit.com/@steem-pays) | Servicio de intercambio de STEEM y SBD a Bolívares y Pesos Colombianos | [Servidor en Discord](https://discord.gg/YQGHe2d)  
+[@steemitcolombia](https://steemit.com/@steemitcolombia) | Una comunidad unida, que apoya el crecimiento del buen contenido en español. | [Servidor en Discord](https://discord.gg/B3QhxQ9)  
 [@steemitspanish](https://steemit.com/@steemitspanish) | Comunidad de apoyo | [Grupo en Telegram](https://telegram.me/steemitspanish)  
 [@theunion](https://steemit.com/@theunion) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/bmuM6f)
 [@trailhispano](https://steemit.com/@trailhispano) | Comunidad de apoyo Hispano creada por @moisesmcardona Witness| [Servidor de discord](https://discord.gg/XqgGQH3)  
