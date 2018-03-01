@@ -13,6 +13,7 @@ function trailCount($language){
     getTrailCount($language, "Bienvenida", "bienvenida", $mysqli);
     getTrailCount($language, "Cervantes", "cervantes", $mysqli);
     getTrailCount($language, "Cinauco ", "cinauco", $mysqli);
+    getTrailCount($language, "CodeByte ", "codebyte", $mysqli);
     getTrailCount($language, "dropahead", "dropahead", $mysqli);
     getTrailCount($language, "Proyecto Engranate", "engranaje", $mysqli);
     getTrailCount($language, "MUSICLASS", "musiclass", $mysqli);
