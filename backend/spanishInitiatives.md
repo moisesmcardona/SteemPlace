@@ -1,7 +1,8 @@
 Nombre | Vocación | Link  
 -|-|-  
 [@babelproyect](https://steemit.com/@babelproyect) | Comunidad de Apoyo | [Servidor en Discord](https://discord.gg/wcgVS5)  
-[@cinauco](https://steemit.com/@cinauco) | Proyecto de Curacion etiqueta #castellano para la comunidad hispana creado por [@acostaeladio](https://steemit.com/@acostaeladio) | [Servidor en Discord](https://discord.gg/pnWWTdj)   
+[@cinauco](https://steemit.com/@cinauco) | Proyecto de Curacion etiqueta #castellano para la comunidad hispana creado por [@acostaeladio](https://steemit.com/@acostaeladio) | [Servidor en Discord](https://discord.gg/pnWWTdj)
+[@codebyte](https://steemit.com/@codebyte) | Proyecto de apoyo al talento no descubierto de los steemians de la comunidad hispanohablante | [Servidor en Discord](https://discord.gg/UkXGKpZ)   
 [@cooperacion](https://steemit.com/@cooperacion)  | Curacion y apoyo | [Servidor en Discord](https://discord.gg/WcDhMjd)  
 [@dropahead](https://steemit.com/@dropahead)  | Proyecto de Curacion en #castellano creado por @dropahead Witness  |[Servidor en Discord](https://discord.gg/https://discord.gg/kgrZDR8)  
 [@enmovimiento](https://steemit.com/@enmovimiento) | Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pnWWTdj)  
