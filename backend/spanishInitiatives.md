@@ -20,7 +20,8 @@ Nombre | Vocación | Link
 [@steemitspanish](https://steemit.com/@steemitspanish) | Comunidad de apoyo | [Grupo en Telegram](https://telegram.me/steemitspanish)  
 [@theunion](https://steemit.com/@theunion) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/bmuM6f)
 [@trailhispano](https://steemit.com/@trailhispano) | Comunidad de apoyo Hispano creada por @moisesmcardona Witness| [Servidor de discord](https://discord.gg/XqgGQH3)  
-[@votovzla](https://steemit.com/@votovzla) |  Curacion y apoyo Venezuela |[Servidor en Discord](https://discord.gg/jv2TeAP)  
+[@votovzla](https://steemit.com/@votovzla) |  Curacion y apoyo Venezuela |[Servidor en Discord](https://discord.gg/jv2TeAP)
+[@mosqueteros](https://steemit.com/@mosqueteros) |  Proyecto de curación y apoyo |[Servidor en Discord](https://discord.gg/nffbC7x)  
 
 ***  
 Los Witness en Steemit son quienes proveen la infraestructura y desarrollan projectos para las comunidades, es importante que escojas a los witness que te representen, es importante que los usuarios apoyen con su voto a aquellos que trabajan por su comunidad.    
