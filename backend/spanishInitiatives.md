@@ -20,7 +20,8 @@ Nombre | Vocación | Link
 [@steemitcolombia](https://steemit.com/@steemitcolombia) | Una comunidad unida, que apoya el crecimiento del buen contenido en español. | [Servidor en Discord](https://discord.gg/B3QhxQ9)  
 [@steemitspanish](https://steemit.com/@steemitspanish) | Comunidad de apoyo | [Grupo en Telegram](https://telegram.me/steemitspanish)  
 [@theunion](https://steemit.com/@theunion) | Comunidad de apoyo | [Servidor en Discord](https://discord.gg/bmuM6f)
-[@trailhispano](https://steemit.com/@trailhispano) | Comunidad de apoyo Hispano creada por @moisesmcardona Witness| [Servidor de discord](https://discord.gg/XqgGQH3)  
+[@trailhispano](https://steemit.com/@trailhispano) | Comunidad de apoyo Hispano creada por @moisesmcardona Witness| [Servidor de discord](https://discord.gg/XqgGQH3) 
+VeneBohemians | Comunidad dirigida al crecimiento del talento venezolano, cultura artística y vida bohemia en la plataforma Steemit | [Servidor en Discord](https://discord.gg/A8BUumx)  
 [@votovzla](https://steemit.com/@votovzla) |  Curacion y apoyo Venezuela |[Servidor en Discord](https://discord.gg/jv2TeAP)
 
 ***  
