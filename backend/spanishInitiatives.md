@@ -1,5 +1,6 @@
 Nombre | Vocación | Link  
 -|-|-  
+[@air-clinic](https://steemit.com/@air-clinic) | Clínica descentralizada donde puedes realizar tus consultas médicas y veterinarias. | [Servidor en Discord](https://discord.gg/9Y9cWUU)  
 [@babelproyect](https://steemit.com/@babelproyect) | Comunidad de Apoyo | [Servidor en Discord](https://discord.gg/wcgVS5)  
 [@cinauco](https://steemit.com/@cinauco) | Proyecto de Curacion etiqueta #castellano para la comunidad hispana creado por [@acostaeladio](https://steemit.com/@acostaeladio) | [Servidor en Discord](https://discord.gg/pnWWTdj)
 [@codebyte](https://steemit.com/@codebyte) | Proyecto de apoyo al talento no descubierto de los steemians de la comunidad hispanohablante | [Servidor en Discord](https://discord.gg/UkXGKpZ)   
