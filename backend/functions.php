@@ -83,8 +83,8 @@ function getTrailCount($language, $trail, $account, $mysqli){
 }
 function checkUser($user, $userstatus, $mysqli){
     if($userstatus==1){
-        $checkUser = exec("python3 /var/www/steemapi-python/checkSteemPlace.py ".$_SESSION['usertouse']."");
-        if ($checkUser == "True"){
+        $check = file_get_contents("https://api.steem.place/checkApprovedAccounts/?user=".$_SESSION['usertouse']."&account=steem.place");
+        if ($check == "True"){
             $mysqli->query("UPDATE users2 SET approved=1 WHERE drupalkey = $user->uid");
         }
         else {

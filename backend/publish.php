@@ -25,7 +25,7 @@ function publish($user, $language){
         $accountNotConfigured = "You haven't configured your account. You may use this page but you'll be required to enter your account username and Private Posting Key each time you write a post.</br></br>";
         $previewText = "Preview";
         $postButton = "Post";
-        $postFooter = "<br><hr>This post has been posted using the [Post Publishing Tool of https://steem.place](https://steem.place/en/Publish)";
+        $postFooter = "<br><hr>This post has been posted using [Steem.Place](https://steem.place/en/Publish)";
         $postPublished = "<b>Your post has been posted successfully. <a href=https://steemit.com/tag/@%s/%s>Click here to see your newly published post</a></b>";
         $errorOccurred = "<b>An error occurred when posting your post</b>";
     }
@@ -39,7 +39,7 @@ function publish($user, $language){
         $accountNotConfigured = "No has configurado tu cuenta. Puedes usar esta página pero tendrás que escribir tu nombre de usuario y posting key privada.</br></br>";
         $previewText = "Vistazo";
         $postButton = "Publicar";
-        $postFooter = "<br><hr>Este post ha sido escrito utilizando la [Herramienta de publicar posts de https://steem.place](https://steem.place/es/Publicar)";
+        $postFooter = "<br><hr>Este post ha sido escrito utilizando [Steem.Place](https://steem.place/es/Publicar)";
         $postPublished = "<b>Tu post ha sido publicado exitósamente. <a href=https://steemit.com/tag/@%s/%s>Haz click aquí para verlo.</a></b>";
         $errorOccurred = "<b>An error occurred when posting your post</b>";
     }
@@ -130,8 +130,6 @@ function publish($user, $language){
         $title = $_POST['title'];
         $title = str_replace("\"", "\\\"", $title);
         $title = str_replace("`", "\`", $title);
-        $body = str_replace("\"", "\\\"", $body);
-        $body = str_replace("`", "\`", $body);
         $userToUse = $_SESSION['usertouse'];
         $userToUse = str_replace("\"", "_", $userToUse);
         $userToUse = str_replace("`", "_", $userToUse);
@@ -142,14 +140,32 @@ function publish($user, $language){
             $sp_ppk = str_replace("\"", "\\\"", $sp_ppk);
             $sp_ppk = str_replace("`", "\`", $sp_ppk);
             $sp_ppk = str_replace(" ", "-", $sp_ppk);
-            $posted = exec("python3 /var/www/steemapi-python/postToSteem.py \"" . $title . "\" \"" . $body . "\" \"" . $userToUse . "\" \"" . $url . "\" \"" . $tags . "\" \"" . $sp_ppk . "\"");
+            $data = array('title' => $title, 'body' => $body, 'author' => $userToUse, 'permlink' => $url, 'tags' => $tags, 'pk' => $sp_ppk);
+            $options = array(
+                'http' => array(
+                    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                    'method'  => 'POST',
+                    'content' => http_build_query($data)
+                )
+            );
+            $context  = stream_context_create($options);
+            $posted = file_get_contents('https://api.steem.place/postToSteem/', false, $context);
         }
         else {
             $ppk =  $_SESSION['pk'];
             $ppk = str_replace("\"", "\\\"", $ppk);
             $ppk = str_replace("`", "\`", $ppk);
             $ppk = str_replace(" ", "-", $ppk);
-            $posted = exec("python3 /var/www/steemapi-python/postToSteem.py \"" . $title . "\" \"" . $body . "\" \"" . $userToUse . "\" \"" . $url . "\" \"" . $tags . "\" \"" . $ppk . "\"");
+            $data = array('title' => $title, 'body' => $body, 'author' => $userToUse, 'permlink' => $url, 'tags' => $tags, 'pk' => $ppk);
+            $options = array(
+                'http' => array(
+                    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                    'method'  => 'POST',
+                    'content' => http_build_query($data)
+                )
+            );
+            $context  = stream_context_create($options);
+            $posted = file_get_contents('https://api.steem.place/postToSteem/', false, $context);
         }
         echo "</br></br></br>";
         if ($posted=="ok")

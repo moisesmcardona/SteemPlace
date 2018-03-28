@@ -49,7 +49,7 @@ function AccountConfiguration($user, $language)
             $account = str_replace("\"", "_", $account);
             $account = str_replace("&", "_", $account);
             $account = str_replace(" ", "_", $account);
-            $checkUser = exec("python3 /var/www/steemapi-python/checkSteemPlace.py $account");
+            $checkUser = file_get_contents("https://api.steem.place/checkApprovedAccounts/?user=$account&account=steem.place");
             if ($checkUser == "True")
                 $approved = 1;
             else
@@ -77,7 +77,7 @@ function AccountConfiguration($user, $language)
         if ($recordfound == 0) {
             echo $form_recordNotFound;
         } else {
-            $checkUser = exec("python3 /var/www/steemapi-python/checkSteemPlace.py $account");
+            $checkUser = file_get_contents("https://api.steem.place/checkApprovedAccounts/?user=$account&account=steem.place");
             if ($checkUser == "True")
                 $approved = 1;
             else
