@@ -9,7 +9,6 @@ Nombre | Vocación | Link
 [@enmovimiento](https://steemit.com/@enmovimiento) | Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pnWWTdj)  
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Grupo en Facebook](https://www.facebook.com/groups/174466129786236/)  
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pzWBrJV) 
-LottoSteemit | Lotería (Más información en el servidor) | [Servidor en Discord](https://discord.gg/8rnn6GM)
 [@minotaurototal](https://steemit.com/@minotaurototal) | Curación, Apoyo y Resteem | [Servidor en Discord](https://discord.gg/bzTb5cA)
 [@mosqueteros](https://steemit.com/@mosqueteros) |  Proyecto de curación y apoyo |[Servidor en Discord](https://discord.gg/nffbC7x)  
 [@musiclass](https://steemit.com/@musiclass) |  Capacitacion y Apoyo para Musico |[Grupo en Discord](https://discord.gg/BHJzTmv)  
