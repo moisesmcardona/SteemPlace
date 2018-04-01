@@ -1,3 +1,14 @@
+<script>
+    function populateUrlField()
+    {
+        var url = document.getElementsByName("title")[0].value;
+        var regex1 = new RegExp('([ \/\\\\`;&."\'!¡@#$%^*()×÷áéíóúñµö®©¿?²³¤€¼½¾‘’¥])', 'g');
+        var regex2 = new RegExp('([\\[\\]])', 'g');
+        url = url.replace(regex1, "-");
+        url = url.replace(regex2, "");
+        document.getElementsByName("url")[0].value = url.toLowerCase();
+    }
+</script>
 <?php
 require_once 'config.php';
 require_once 'functions.php';
@@ -72,6 +83,8 @@ function publish($user, $language){
         $url = str_replace("&", "-", $url);
         $url = str_replace(" ", "-", $url);
         $url = str_replace(".", "-", $url);
+        $url = str_replace("[", "", $url);
+        $url = str_replace("]", "", $url);
         $url = strtolower($url);
         $tags = str_replace("\"", ",", $tags);
         $tags = str_replace("`", ",", $tags);
@@ -95,6 +108,8 @@ function publish($user, $language){
         $url = str_replace("&", "-", $url);
         $url = str_replace(" ", "-", $url);
         $url = str_replace(".", "-", $url);
+        $url = str_replace("[", "", $url);
+        $url = str_replace("]", "", $url);
         $url = strtolower($url);
         $tags = str_replace("\"", ",", $tags);
         $tags = str_replace("`", ",", $tags);
@@ -105,10 +120,10 @@ function publish($user, $language){
     }
     if ($_SESSION['IsLoggedIn']==1 && $_SESSION['UserOK'] == 0)
         echo $accountNotConfigured;
-    echo    "<form method='post'>";
+    echo    "<form name='publishform' method='post'>";
     if ($_SESSION['IsLoggedIn']==0 || $_SESSION['UserOK'] == 0)
         echo "<input  id='elements' name='username' type='text' value='".$_SESSION['usertouse']."'/></br>";
-    echo "<input id='elements' name='title' type='text' value='".$title."' /></br>
+    echo     "<input id='elements' name='title' type='text' value='".$title."' onkeyup='populateUrlField()'/></br>
               <textarea id='elements' name='body' rows='20'>".$body."</textarea></br>
               <input  id='elements' name='tags' type='text' value='".$tags."'/></br>
               <input  id='elements' name='url' type='text' value='".$url."'/></br>";
