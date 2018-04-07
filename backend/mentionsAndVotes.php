@@ -8,6 +8,12 @@ function userMentionsAndVotes($user, $language, $action)
             $tableHeader = "<th>Author</th> 
                         <th>Post</th> 
                         <th>Date</th>";
+        else if ($action == "pendingVotes")
+            $tableHeader = " <th>Date</th>
+                            <th>Author</th> 
+                            <th>Post</th> 
+                            <th>Percent</th>
+                            <th>Original Voter</th>";
         else
             $tableHeader = "<th>Author</th> 
                             <th>Post</th> 
@@ -22,16 +28,22 @@ function userMentionsAndVotes($user, $language, $action)
             $tableHeader = "<th>Autor</th> 
                             <th>Post</th> 
                             <th>Fecha</th>";
+        else if ($action == "pendingVotes")
+            $tableHeader = "<th>Fecha</th>
+                            <th>Autor</th> 
+                            <th>Post</th> 
+                            <th>Porciento</th>
+                            <th>Votador original</th>";
         else
             $tableHeader = "<th>Autor</th> 
                             <th>Post</th> 
                             <th>Porciento</th>
                             <th>Votador original</th>
-                            <th>Hora</th>";
+                            <th>Fecha</th>";
         $accountNotConfigured = "</br></br>Debes configurar tu cuenta antes de usar esta página</br></br>";
         $notLoggedIn = "</br></br>Tienes que registrarte para usar esta página</br></br>";
     }
-    if (user_is_logged_in()) {
+    if (user_is_logged_in() || $action == "pendingVotes") {
         $result = $mysqli->query("SELECT * FROM users2 WHERE drupalkey = $user->uid");
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -39,6 +51,8 @@ function userMentionsAndVotes($user, $language, $action)
             }
             if ($action == "mentions")
                 $result = $mysqli->query("SELECT * FROM mentions WHERE username='$username' ORDER BY id DESC LIMIT 100");
+            else if ($action == "pendingVotes")
+                $result = $mysqli->query("SELECT * FROM votes WHERE processed = 0 ORDER BY id ASC LIMIT 5000");
             else
                 $result = $mysqli->query("SELECT * FROM voted WHERE voter='$username' AND processed=1 ORDER BY id DESC LIMIT 100");
             if (mysqli_num_rows($result) > 0) {
@@ -61,9 +75,11 @@ function userMentionsAndVotes($user, $language, $action)
                       <tbody> ";
                 while ($row = mysqli_fetch_assoc($result)) {
                     if ($action == "mentions")
-                        echo "<tr><td><a href=https://steemit.com/@" . $row['author'] . "  target=_blank>@" . $row['author'] . "</a></td><td><a href=https://steemit.com/tag/@" . $row['author'] . "/" . $row['link'] . "  target=_blank>" . $row['link'] . "</a></td><td>" . $row['time'] . "</tr>";
+                        echo "<tr><td><a href=https://steemit.com/@" . $row['author'] . "  target=_blank>@" . $row['author'] . "</a></td><td><a href=https://steemit.com/tag/@" . $row['author'] . "/" . $row['link'] . "  target=_blank>" . $row['link'] . "</a></td><td>" . $row['time'] . "</td></tr>";
+                    else if ($action == "pendingVotes")
+                        echo "<tr><td>" . $row['date'] . "</td><td><a href=https://steemit.com/@" . $row['author'] . "  target=_blank>@" . $row['author'] . "</a></td><td><a href=https://steemit.com/tag/@" . $row['author'] . "/" . $row['permlink'] . "  target=_blank>" . $row['permlink'] . "</a></td><td>" . $row['weight'] . "%</td><td><a href=https://steemit.com/@" . $row['voter'] . "  target=_blank>@" . $row['voter'] . "</a></td></tr>";
                     else
-                        echo "<tr><td><a href=https://steemit.com/@" . $row['author'] . "  target=_blank>@" . $row['author'] . "</a></td><td><a href=https://steemit.com/tag/@" . $row['author'] . "/" . $row['permlink'] . "  target=_blank>" . $row['permlink'] . "</a></td><td>" . $row['weight'] . "%</td><td><a href=https://steemit.com/@" . $row['originalvoter'] . "  target=_blank>@" . $row['originalvoter'] . "</a></td><td>" . $row['date'] . "</tr>";
+                        echo "<tr><td><a href=https://steemit.com/@" . $row['author'] . "  target=_blank>@" . $row['author'] . "</a></td><td><a href=https://steemit.com/tag/@" . $row['author'] . "/" . $row['permlink'] . "  target=_blank>" . $row['permlink'] . "</a></td><td>" . $row['weight'] . "%</td><td><a href=https://steemit.com/@" . $row['originalvoter'] . "  target=_blank>@" . $row['originalvoter'] . "</a></td><td>".$row['date']."</td></tr>";
                 }
                 echo "</tbody></table>";
             }
