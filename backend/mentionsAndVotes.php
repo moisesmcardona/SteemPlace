@@ -45,7 +45,7 @@ function userMentionsAndVotes($user, $language, $action)
     }
     if (user_is_logged_in() || $action == "pendingVotes") {
         $result = $mysqli->query("SELECT * FROM users2 WHERE drupalkey = $user->uid");
-        if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result) > 0 || $action == "pendingVotes") {
             while ($row = mysqli_fetch_assoc($result)) {
                 $username = $row['username'];
             }
