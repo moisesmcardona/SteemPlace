@@ -4,42 +4,54 @@ function userMentionsAndVotes($user, $language, $action)
 {
     global $mysqli;
     if ($language == "en"){
-        if ($action == "mentions")
+        if ($action == "mentions") {
+            $nodata = "You haven't been mentioned in a post";
             $tableHeader = "<th>Author</th> 
                         <th>Post</th> 
                         <th>Date</th>";
-        else if ($action == "pendingVotes")
+        }
+        else if ($action == "pendingVotes") {
+            $nodata = "The system is up to date";
             $tableHeader = " <th>Date</th>
                             <th>Author</th> 
                             <th>Post</th> 
                             <th>Percent</th>
                             <th>Original Voter</th>";
-        else
+        }
+        else {
+            $nodata = "You haven't voted in any post using the Steem.Place system";
             $tableHeader = "<th>Author</th> 
                             <th>Post</th> 
                             <th>Percent</th>
                             <th>Original Voter</th>
                             <th>Date</th>";
+        }
         $accountNotConfigured = "</br></br>You must configure your account before page</br></br>";
         $notLoggedIn = "</br></br>You must be registered in order to use this page</br></br>";
     }
     else{
-        if ($action == "mentions")
+        if ($action == "mentions") {
+            $nodata = "No has sido mencionado en ningún post";
             $tableHeader = "<th>Autor</th> 
                             <th>Post</th> 
                             <th>Fecha</th>";
-        else if ($action == "pendingVotes")
+        }
+        else if ($action == "pendingVotes") {
+            $nodata = "El sistema está al día con los votos";
             $tableHeader = "<th>Fecha</th>
                             <th>Autor</th> 
                             <th>Post</th> 
                             <th>Porciento</th>
                             <th>Votador original</th>";
-        else
+        }
+        else {
+            $nodata = "No has votado en ningún post";
             $tableHeader = "<th>Autor</th> 
                             <th>Post</th> 
                             <th>Porciento</th>
                             <th>Votador original</th>
                             <th>Fecha</th>";
+        }
         $accountNotConfigured = "</br></br>Debes configurar tu cuenta antes de usar esta página</br></br>";
         $notLoggedIn = "</br></br>Tienes que registrarte para usar esta página</br></br>";
     }
@@ -83,6 +95,8 @@ function userMentionsAndVotes($user, $language, $action)
                 }
                 echo "</tbody></table>";
             }
+            else
+               echo '<br>' . $nodata;
         } else {
             echo $accountNotConfigured;
         }
