@@ -9,6 +9,7 @@ require_once 'config.php';
 require_once 'functions.php';
 function trailCount($language){
     global $mysqli;
+    getTrailCount($language, "ApoyoLatino", "apoyolatino", $mysqli);
     getTrailCount($language, "BABEL SIN FRONTERAS", "babelproyect", $mysqli);
     getTrailCount($language, "Bienvenida", "bienvenida", $mysqli);
     getTrailCount($language, "Cervantes", "cervantes", $mysqli);
@@ -25,5 +26,8 @@ function trailCount($language){
     getTrailCount($language, "Trail Hispano", "trailhispano", $mysqli);
     getTrailCount($language, "Ubi Caritas", "ubicaritas", $mysqli);
     getTrailCount($language, "votovzla ", "votovzla", $mysqli);
-    echo "<br>NOTE: These numbers only shows the amount of users who are following these trails by using this website.";
+    if ($language == "en")
+        echo "<br>NOTE: These numbers only shows the amount of users who are following these trails by using this website.";
+    else
+        echo "<br>NOTA: Estos números sólamente reflejan los usuarios que siguen estos trails en esta página.";
 }

@@ -40,6 +40,9 @@ function Trail($user, $language)
             $amigoosChecked = "";
             $amigoosPercent = 0.0;
             $amigoosFound = False;
+            $apoyolatinoChecked = "";
+            $apoyolatinoPercent = 0.0;
+            $apoyolatinoFound = False;
             $babelproyectChecked = "";
             $babelproyectPercent = 0.0;
             $babelproyectFound = False;
@@ -102,6 +105,7 @@ function Trail($user, $language)
             $wearecodexFound = False;
             if (isset($_POST['save'])) {
                 $amigoosFound = $_SESSION['amigoosFound'];
+                $apoyolatinoFound = $_SESSION['apoyolatinoFound'];
                 $babelproyectFound = $_SESSION['babelproyectFound'];
                 $bienvenidaFound = $_SESSION['bienvenidaFound'];
                 $codebyteFound = $_SESSION['codebyteFound'];
@@ -131,6 +135,15 @@ function Trail($user, $language)
                     updateUserToFollowTable($user, 'amigoos', $_POST['weightamigoos'],  $amigoosEnabled, $mysqli);
                 else
                     addUserToFollowTable($user, $_SESSION['usertouse'], 'amigoos', $_POST['weightamigoos'], $amigoosEnabled, $mysqli);
+                //apoyolatino
+                if (isset($_POST['activarapoyolatino']))
+                    $apoyolatinoEnabled = 1;
+                else
+                    $apoyolatinoEnabled = 0;
+                if ($apoyolatinoFound == True)
+                    updateUserToFollowTable($user, 'apoyolatino', $_POST['weightapoyolatino'],  $apoyolatinoEnabled, $mysqli);
+                else
+                    addUserToFollowTable($user, $_SESSION['usertouse'], 'apoyolatino', $_POST['weightapoyolatino'], $apoyolatinoEnabled, $mysqli);
                 //babelproyect
                 if (isset($_POST['activarbabelproyect']))
                     $babelproyectEnabled = 1;
@@ -325,6 +338,14 @@ function Trail($user, $language)
                                 $amigoosChecked = "checked";
                             else
                                 $amigoosChecked = "";
+                        }  if ($row["account"] == "apoyolatino") {
+                            $apoyolatinoFound = True;
+                            $apoyolatinoEnabled = $row["enabled"];
+                            $apoyolatinoPercent = $row["percent"];
+                            if ($apoyolatinoEnabled == 1)
+                                $apoyolatinoChecked = "checked";
+                            else
+                                $apoyolatinoChecked = "";
                         } else if ($row["account"] == "babelproyect") {
                             $babelproyectFound = True;
                             $babelproyectEnabled = $row["enabled"];
@@ -489,6 +510,7 @@ function Trail($user, $language)
                     }
                 }
                 $_SESSION['amigoosFound'] = $amigoosFound;
+                $_SESSION['apoyolatinoFound'] = $apoyolatinoFound;
                 $_SESSION['babelproyectFound'] = $babelproyectFound;
                 $_SESSION['bienvenidaFound'] = $bienvenidaFound;
                 $_SESSION['codebyteFound'] = $codebyteFound;
@@ -521,6 +543,7 @@ function Trail($user, $language)
 					</thead> 
 					<tbody>
 						<tr><td><a href=https://steemit.com/@amigoos>@amigoos</a></td><td><input type='checkbox' name='activaramigoos' value='activaramigoos' id='activaramigoos' $amigoosChecked></td><td><input name='weightamigoos' type='text'/ value=$amigoosPercent>%</td></tr>
+						<tr><td><a href=https://steemit.com/@apoyolatino>@apoyolatino</a></td><td><input type='checkbox' name='activarapoyolatino' value='activarapoyolatino' id='activarapoyolatino' $apoyolatinoChecked></td><td><input name='weightapoyolatino' type='text'/ value=$apoyolatinoPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@babelproyect>@babelproyect</a></td><td><input type='checkbox' name='activarbabelproyect' value='activarbabelproyect' id='activarbabelproyect' $babelproyectChecked></td><td><input name='weightbabelproyect' type='text'/ value=$babelproyectPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@bienvenida>@bienvenida</a></td><td><input type='checkbox' name='activarbienvenida' value='activarbienvenida' id='activarbienvenida' $bienvenidaChecked></td><td><input name='weightbienvenida' type='text'/ value=$bienvenidaPercent>%</td></tr>
 						<tr><td><a href=https://steemit.com/@codebyte>@codebyte</a></td><td><input type='checkbox' name='activarcodebyte' value='activarcodebyte' id='activarcodebyte' $codebyteChecked></td><td><input name='weightcodebyte' type='text'/ value=$codebytePercent>%</td></tr>
