@@ -36,6 +36,24 @@ function deleteUserFromFollowTable($user, $account, $mysqli){
     $stmt->execute();
     $stmt->close();
 }
+function addUserToPostNotificationTable($user, $usertouse, $account, $enabled, $mysqli){
+    $stmt = $mysqli->prepare("INSERT INTO postnotification (drupalkey, user, account, enabled) VALUES (".$user->uid.", ?, ?, ?)");
+    $stmt->bind_param("ssi", $usertouse, $account, $enabled);
+    $stmt->execute();
+    $stmt->close();
+}
+function updateUserToPostNotificationTable($user, $account, $enabled, $mysqli){
+    $stmt = $mysqli->prepare("UPDATE postnotification SET enabled=? WHERE account=? AND drupalkey=".$user->uid);;
+    $stmt->bind_param("is", $enabled, $account);
+    $stmt->execute();
+    $stmt->close();
+}
+function deleteUserFromPostNotificationTable($user, $account, $mysqli){
+    $stmt = $mysqli->prepare("DELETE FROM postnotification WHERE account=? AND drupalkey=".$user->uid);
+    $stmt->bind_param("s", $account);
+    $stmt->execute();
+    $stmt->close();
+}
 function getUserVoteReport($user, $date, $sort, $mysqli){
     $stmt = $mysqli->prepare("SELECT DISTINCT * FROM votesprocessed WHERE voter=? AND date LIKE ? ORDER BY $sort");
     $date = "{$date}%";
@@ -45,8 +63,8 @@ function getUserVoteReport($user, $date, $sort, $mysqli){
     $stmt->close();
     return $results;
 }
-function insertSettingsTable($user, $username, $notifyenabled, $mysqli){
-    $stmt = $mysqli->prepare("INSERT INTO settings (drupalkey, username, notifyenabled) VALUES ($user->uid, ?, $notifyenabled)");
+function insertSettingsTable($user, $username, $notifyenabled, $replyenabled, $mysqli){
+    $stmt = $mysqli->prepare("INSERT INTO settings (drupalkey, username, notifyenabled, replyenabled) VALUES ($user->uid, ?, $notifyenabled, $replyenabled)");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->close();
@@ -57,8 +75,8 @@ function insertPublishedPost($username, $url, $mysqli){
     $stmt->execute();
     $stmt->close();
 }
-function updateSettingsTable($user, $username, $notifyenabled, $mysqli){
-    $stmt = $mysqli->prepare("UPDATE settings SET username=?, notifyenabled=$notifyenabled WHERE drupalkey = $user->uid");
+function updateSettingsTable($user, $username, $notifyenabled, $replyenabled, $mysqli){
+    $stmt = $mysqli->prepare("UPDATE settings SET username=?, notifyenabled=$notifyenabled, replyenabled=$replyenabled WHERE drupalkey = $user->uid");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->close();
