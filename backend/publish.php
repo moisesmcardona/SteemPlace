@@ -2,7 +2,7 @@
     function populateUrlField()
     {
         var url = document.getElementsByName("title")[0].value;
-        var regex1 = new RegExp('([ \/\\\\`;&."\'!¡@#$%^*()×÷áéíóúñµöÁÉÍÓÚÑÜ®©¿?²³¤€¼½¾‘’¥])', 'g');
+        var regex1 = new RegExp('([ \/\\\\`;&."\'!¡@#$%^*()×÷áéíóúñµöÁÉÍÓÚÑÜ®©¿?²³¤€¼½¾‘’¥:])', 'g');
         var regex2 = new RegExp('([\\[\\]])', 'g');
         url = url.replace(regex1, "-");
         url = url.replace(regex2, "");
