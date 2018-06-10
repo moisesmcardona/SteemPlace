@@ -1,3 +1,5 @@
+A continuación, puedes ver las comunidades e iniciativas que existen en la plataforma Steemit dirigidas a la comunidad hispana:
+
 Nombre | Vocación | Link  
 -|-|-  
 [@air-clinic](https://steemit.com/@air-clinic) | Clínica descentralizada donde puedes realizar tus consultas médicas y veterinarias. | [Servidor en Discord](https://discord.gg/9Y9cWUU)
@@ -39,3 +41,5 @@ Perfil | Votar witness
 [@castellano](https://steemit.com/@castellano) | [Vota usando SteemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=castellano&approve=1)  
 [@dropahead](https://steemit.com/@dropahead) | [Vota usando SteemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=dropahead&approve=1)  
 [@moisesmcardona](https://steemit.com/@moisesmcardona) | [Vota usando SteemConnect V2](https://v2.steemconnect.com/sign/account-witness-vote?witness=moisesmcardona&approve=1)  
+
+Si tienes una iniciativa o comunidad y no se encuentra en esta lista y deseas que sea parte de la misma, [lee este post con los pasos a seguir para añadirlo aquí.](https://steemit.com/castellano/@moisesmcardona/iniciativas-steemplace-github)
