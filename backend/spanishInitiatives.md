@@ -12,6 +12,7 @@ Nombre | Vocación | Link
 [@enmovimiento](https://steemit.com/@enmovimiento) | Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pnWWTdj)  
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Grupo en Facebook](https://www.facebook.com/groups/174466129786236/)  
 [@engranaje](https://steemit.com/@engranaje) |  Comunidad de Apoyo |[Servidor en Discord](https://discord.gg/pzWBrJV)
+[@faircrew](https://steemit.com/@faircrew) | Comunidad descentralizada donde artistas, escritores, fotógrafos y creadores de contenido de toda categoría se reúnen no sólo para tornar su creatividad o contenido en una criptodivisa, sino para también alentar, orientar y promover a los usuarios. | [Servidor en Discord](https://discord.gg/GCM7V8X)
 [Familia Romana](https://steemit.com/@cincinato) |  Apoyo a los autores hispanohablantes y base del proyecto Spanish Freewrite para escritores en español. | [Servidor en Discord](https://discord.gg/5Db6S7s)  
 [@minotaurototal](https://steemit.com/@minotaurototal) | Curación, Apoyo y Resteem | [Servidor en Discord](https://discord.gg/bzTb5cA)
 [@mosqueteros](https://steemit.com/@mosqueteros) |  Proyecto de curación y apoyo |[Servidor en Discord](https://discord.gg/nffbC7x)  
