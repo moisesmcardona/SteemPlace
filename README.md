@@ -1,6 +1,6 @@
 # Steem.Place
 
-[Steem.Place](https://steem.place) is a website that allows you to do some stuff, like the following:
+[Steem.Place](https://steem.place) was a website that allowed you to do some stuff, like the following:
 
 * Vote on posts other people votes
 * Follow some trails
@@ -15,4 +15,4 @@ The **English** and **Spanish** folders contains the code that should be added t
 
 It has to be noted that the site account sign-up/login is just for the website and is completely unrelated to Steem. The site also doesn't asks for your Steem password in any way. In fact, it uses SteemConnect when you sign up on the site to authorize the @steem.place account to your Steem Account and associate it with your Drupal account. SteemConnect is a trusted 3rd-party account authoriation/deauthorization tool, and just the Publishing section will require the Private Posting Key if you opt not to use SteemConnect or sign up at the site.
 
-This repo is under the MIT license. Feel free to adapt the code to your needs but always include the copyright notice with your work and it will be appreciated if you mention me in your works as well. After all, [I'm a Witness in Steemit.](https://steemit.com/@moisesmcardona).
+This repo is under the MIT license. Feel free to adapt the code to your needs.
